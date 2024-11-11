@@ -3,6 +3,21 @@
 // Відслідковуємо кліки на усій сторінці
 // document.addEventListener("click", documentActions);
 
+document.addEventListener("click", documentActions);
+
+function documentActions(e) {
+   const targetElement = e.target;
+   const bodyEl = document.body;
+
+   if (targetElement.closest(".menu-icon")) {
+      bodyEl.classList.toggle("menu-open");
+   }
+
+   if (targetElement.closest(".menu__link") && bodyEl.classList.contains("menu-open")) {
+      bodyEl.classList.remove("menu-open");
+   }
+}
+
 // function documentActions(e) {
 //    const targetElement = e.target;
 

@@ -1,0 +1,64 @@
+.title {
+   font-family: "DM Serif Text", serif;
+   font-size: toRem(58);
+   @media (max-width: toEm($tablet)) {
+      font-size: toRem(50);
+   }
+   @media (max-width: toEm($mobile)) {
+      font-size: toRem(45);
+   }
+   @media (max-width: toEm($mobileSmall)) {
+      font-size: toRem(35);
+   }
+}
+
+.top-block {
+   // .top-block__label
+   &__label {
+      text-transform: uppercase;
+      color: $accentColor;
+      font-size: toRem(28);
+      line-height: 121.428571%; /* 34/28 */
+      &:not(:last-child) {
+         margin-bottom: toRem(13);
+         @media (max-width: toEm($mobileSmall)) {
+            margin-bottom: toRem(10);
+         }
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(22);
+      }
+   }
+   // .top-block__title
+   &__title {
+      font-family: "DM Serif Text", serif;
+      font-size: toRem(64);
+      line-height: 146%;
+      @media (max-width: toEm($pc)) {
+         font-size: toRem(58);
+      }
+      @media (max-width: toEm($tablet)) {
+         font-size: toRem(50);
+      }
+      @media (max-width: toEm($mobile)) {
+         font-size: toRem(45);
+         line-height: 120%;
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(35);
+      }
+      span {
+         position: relative;
+         &::after {
+            content: "";
+            position: absolute;
+            bottom: 22%;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: toRem(7);
+            background-color: $accentColor;
+         }
+      }
+   }
+}
