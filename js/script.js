@@ -125,79 +125,54 @@ function documentActions(e) {
 // }
 
 // ------------- Слайдер swiper -------------
-// if (document.querySelector('.swiper')) { // Вказуємо склас потрібного слайдера
-//    // Створюємо слайдер
-//    new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
-//       slidesPerView: 1,
-//       spaceBetween: 0,
-//       // autoHeight: true,
-//       speed: 800,
+if (document.querySelector('.blog__slider')) { // Вказуємо склас потрібного слайдера
+   // Створюємо слайдер
+   new Swiper('.blog__slider', { // Вказуємо склас потрібного слайдера
+      slidesPerView: 3,
+      spaceBetween: 44,
+      // autoHeight: true,
+      speed: 800,
+      loop: true,
 
-//       // touchRatio: 0,
-//       // simulateTouch: false,
-//       // loop: true,
-//       // preloadImages: false,
-//       // lazy: true,
+      /*
+      // Ефекти
+      effect: 'fade',
+      autoplay: {
+         delay: 3000,
+         disableOnInteraction: false,
+      },
+      */
 
-//       /*
-//       // Ефекти
-//       effect: 'fade',
-//       autoplay: {
-//          delay: 3000,
-//          disableOnInteraction: false,
-//       },
-//       */
+      // Кнопки "вліво/вправо"
+      navigation: {
+         prevEl: '.blog__button--prev',
+         nextEl: '.blog__button--next',
+      },
+      /*
 
-//       // Пагінація
-//       /*
-//       pagination: {
-//          el: '.swiper-pagination',
-//          clickable: true,
-//       },
-//       */
-
-//       // Скроллбар
-//       /*
-//       scrollbar: {
-//          el: '.swiper-scrollbar',
-//          draggable: true,
-//       },
-//       */
-
-//       // Кнопки "вліво/вправо"
-//       navigation: {
-//          prevEl: '.swiper-button-prev',
-//          nextEl: '.swiper-button-next',
-//       },
-//       /*
-
-//       // Брейкпоінти
-//       breakpoints: {
-//          640: {
-//             slidesPerView: 1,
-//             spaceBetween: 0,
-//             autoHeight: true,
-//          },
-//          768: {
-//             slidesPerView: 2,
-//             spaceBetween: 20,
-//          },
-//          992: {
-//             slidesPerView: 3,
-//             spaceBetween: 20,
-//          },
-//          1268: {
-//             slidesPerView: 4,
-//             spaceBetween: 30,
-//          },
-//       },
-//       */
-//       // Події
-//       on: {
-
-//       }
-//    });
-// }
+      // Брейкпоінти
+      breakpoints: {
+         640: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            autoHeight: true,
+         },
+         768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+         },
+         992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+         },
+         1268: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+         },
+      },
+      */
+   });
+}
 
 // ------------------ Таби ------------------
 // function setTab(tabElement) {
