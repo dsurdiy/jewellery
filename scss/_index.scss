@@ -436,13 +436,20 @@
 }
 
 .blog {
+   background: url("../img/decor/section-decor.svg") top right no-repeat;
    // .blog__container
    &__container {
    }
    // .blog__title
    &__title {
+      @media (max-width: toEm(1350)) {
+         text-align: center;
+      }
       &:not(:last-child) {
          margin-bottom: toRem(27);
+         @media (max-width: toEm($mobile)) {
+            margin-bottom: toRem(10);
+         }
       }
    }
    // .blog__sub-title
@@ -451,6 +458,9 @@
       font-family: "Cormorant Infant", serif;
       font-weight: 700;
       line-height: 140%;
+      @media (max-width: toEm(1350)) {
+         text-align: center;
+      }
       &:not(:last-child) {
          margin-bottom: toRem(66);
          @media (max-width: toEm($pc)) {
@@ -467,6 +477,13 @@
    // .blog__body
    &__body {
       position: relative;
+      @media (max-width: toEm(1350)) {
+         padding-inline: toRem(65);
+      }
+      @media (max-width: toEm($mobileSmall)) {
+         padding-inline: 0;
+         margin-right: toRem(-15);
+      }
    }
    // .blog__slider
    &__slider {
@@ -484,11 +501,20 @@
    &__button {
       position: absolute;
       top: toRem(116);
+      @media (max-width: toEm($mobileSmall)) {
+         display: none;
+      }
       &--prev {
          left: toRem(-72);
+         @media (max-width: toEm(1350)) {
+            left: 0;
+         }
       }
       &--next {
          right: toRem(-72);
+         @media (max-width: toEm(1350)) {
+            right: 0;
+         }
       }
    }
 }
@@ -511,6 +537,9 @@
       margin-top: toRem(-3);
       display: grid;
       gap: toRem(23);
+      @media (max-width: toEm($pc)) {
+         padding: toRem(25) toRem(15);
+      }
    }
    // .item-blog__title
    &__title {
@@ -533,6 +562,14 @@
       align-items: center;
       justify-content: space-between;
       gap: toRem(15);
+      font-size: toRem(16);
+      @media (max-width: toEm($pc)) {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+      @media (max-width: toEm($tablet)) {
+         flex-direction: row;
+      }
    }
    // .item-blog__date
    &__date {

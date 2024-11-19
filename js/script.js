@@ -128,34 +128,24 @@ function documentActions(e) {
 if (document.querySelector('.blog__slider')) { // Вказуємо склас потрібного слайдера
    // Створюємо слайдер
    new Swiper('.blog__slider', { // Вказуємо склас потрібного слайдера
-      slidesPerView: 3,
-      spaceBetween: 44,
-      // autoHeight: true,
       speed: 800,
       loop: true,
-
-      /*
-      // Ефекти
-      effect: 'fade',
-      autoplay: {
-         delay: 3000,
-         disableOnInteraction: false,
-      },
-      */
 
       // Кнопки "вліво/вправо"
       navigation: {
          prevEl: '.blog__button--prev',
          nextEl: '.blog__button--next',
       },
-      /*
 
       // Брейкпоінти
       breakpoints: {
-         640: {
+         320: {
+            slidesPerView: 1.2,
+            spaceBetween: 10,
+         },
+         480: {
             slidesPerView: 1,
-            spaceBetween: 0,
-            autoHeight: true,
+            spaceBetween: 10,
          },
          768: {
             slidesPerView: 2,
@@ -163,14 +153,13 @@ if (document.querySelector('.blog__slider')) { // Вказуємо склас п
          },
          992: {
             slidesPerView: 3,
-            spaceBetween: 20,
-         },
-         1268: {
-            slidesPerView: 4,
             spaceBetween: 30,
          },
+         1200: {
+            slidesPerView: 3,
+            spaceBetween: 44,
+         },
       },
-      */
    });
 }
 
