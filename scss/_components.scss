@@ -62,3 +62,35 @@
       }
    }
 }
+
+.social {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: toRem(18);
+   // .social__item
+   &__item {
+   }
+   // .social__link
+   &__link {
+      padding: toRem(5);
+      width: toRem(28);
+      height: toRem(28);
+      border-radius: 50%;
+      background-color: $accentColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: #fff;
+         }
+      }
+      img {
+         max-width: 100%;
+         max-height: 100%;
+         object-fit: contain;
+      }
+   }
+}
