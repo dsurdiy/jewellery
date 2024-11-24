@@ -20,4 +20,9 @@ body {
    font-size: toRem(18);
    color: $mainTextColor;
    background-color: $mainBgColor;
+   &.menu-open {
+      overflow: hidden;
+      touch-action: none;
+      overscroll-behavior: none;
+   }
 }
