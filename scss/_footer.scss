@@ -17,6 +17,9 @@
       border-bottom: toRem(1) solid rgba(249, 249, 249, 0.22);
       padding: toRem(40) toRem(0);
       margin-bottom: toRem(22);
+      @media (max-width: toEm($mobileSmall)) {
+         padding: toRem(30) toRem(0);
+      }
    }
    // .footer__container
    &__container {
@@ -65,11 +68,17 @@
             color: $accentColor;
          }
       }
+      @media (max-width: toEm($mobileSmall)) {
+         font-size: toRem(32);
+      }
    }
    // .footer__social
    &__social {
       &:not(:last-child) {
          margin-bottom: toRem(52);
+         @media (max-width: toEm($tablet)) {
+            margin-bottom: toRem(30);
+         }
       }
    }
    // .footer__nav
@@ -83,6 +92,9 @@
    justify-content: center;
    column-gap: toRem(50);
    row-gap: toRem(15);
+   @media (max-width: toEm($mobileSmall)) {
+      column-gap: toRem(30);
+   }
    // .nav-footer__item
    &__item {
    }
