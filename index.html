@@ -11,7 +11,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header data-watch class="header">
       <div class="header__container">
         <a data-goto=".hero" class="header__logo" href="index.html">Jewellery</a>
         <nav class="header__menu menu">
@@ -43,8 +43,8 @@
     <main class="page">
       <section class="page__hero hero">
         <div class="hero__container">
-          <h1 class="hero__title title">The Perfect Jewels for you</h1>
-          <div class="hero__text">
+          <h1 data-watch class="hero__title title">The Perfect Jewels for you</h1>
+          <div data-watch class="hero__text">
             <p>
               Jewellery - we make people happy!
             </p>
@@ -52,24 +52,24 @@
               Among the many incredible stories, ours originates from a simple desire to carry a memory through life.
             </p>
           </div>
-          <a data-goto=".products" class="hero__link" href="#">Shop Now</a>
+          <a data-watch data-goto=".products" class="hero__link" href="#">Shop Now</a>
         </div>
         <img class="hero__image" src="img/hero/hero-bg.webp" alt="Main image">
       </section>
       <div class="page__features features">
         <div class="features__container">
           <ul class="features__items">
-            <li class="features__item item-features">
+            <li data-watch class="features__item item-features">
               <img class="item-features__icon" src="img/icons/gift.svg" alt="Gift">
               <h3 class="item-features__title">Gift Package</h3>
               <p class="item-features__text">We'll choose the perfect gift box for your present.</p>
             </li>
-            <li class="features__item item-features">
+            <li data-watch class="features__item item-features">
               <img class="item-features__icon" src="img/icons/diamond.svg" alt="Diamond">
               <h3 class="item-features__title">Diamond Selection</h3>
               <p class="item-features__text">Individual engraving to perpetuate the deepest feelings.</p>
             </li>
-            <li class="features__item item-features">
+            <li data-watch class="features__item item-features">
               <img class="item-features__icon" src="img/icons/ring.svg" alt="Ring">
               <h3 class="item-features__title">Design Your Ring</h3>
               <p class="item-features__text">Beautiful rings for every taste.</p>
@@ -79,7 +79,7 @@
       </div>
       <section class="page__about about">
         <div class="about__container">
-          <div class="about__wrapper">
+          <div data-watch class="about__wrapper">
             <div class="about__top-block top-block">
               <h3 class="top-block__label">ABOUT US</h3>
               <h2 class="top-block__title">
@@ -88,7 +88,7 @@
             </div>
             <img class="about__image" src="img/about/01.webp" alt="Image">
           </div>
-          <div class="about__wrapper">
+          <div data-watch class="about__wrapper">
             <img class="about__image" src="img/about/02.webp" alt="Image">
             <div class="about__text">
               <p>
@@ -338,6 +338,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/watcher.js"></script>
   <script src="js/script.js"></script>
 </body>
 

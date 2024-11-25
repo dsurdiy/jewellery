@@ -26,3 +26,51 @@ body {
       overscroll-behavior: none;
    }
 }
+
+/* ------- Animation elements -------- */
+
+[data-watch] {
+   transform: translate(0px, toRem(40));
+   opacity: 0;
+   transition: all 0.8s;
+}
+
+[data-watch].active {
+   transform: translate(0px, 0px);
+   opacity: 1;
+}
+
+[data-watch].header {
+   transform: translate(0px, 0px);
+}
+
+[data-watch].hero__link {
+   transition:
+      transform 0.8s,
+      opacity 0.8s,
+      background-color 0.3s;
+}
+
+[data-watch].hero__text,
+[data-watch].features__item:nth-child(2) {
+   transition-delay: 0.3s;
+}
+
+[data-watch].hero__link,
+[data-watch].features__item:nth-child(3) {
+   transition-delay: 0.5s;
+}
+
+[data-watch].about__wrapper:nth-child(1) {
+   transform: translate(toRem(-40), 0px);
+}
+[data-watch].about__wrapper:nth-child(1).active {
+   transform: translate(0px, 0px);
+}
+
+[data-watch].about__wrapper:nth-child(2) {
+   transform: translate(toRem(40), 0px);
+}
+[data-watch].about__wrapper:nth-child(2).active {
+   transform: translate(0px, 0px);
+}
