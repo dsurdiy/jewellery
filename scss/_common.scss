@@ -27,7 +27,7 @@ body {
    }
 }
 
-/* ------- Animation elements -------- */
+// ---------------- Animation elements -------------
 
 [data-watch] {
    transform: translate(0px, toRem(40));
@@ -45,32 +45,48 @@ body {
 }
 
 [data-watch].hero__link {
-   transition:
-      transform 0.8s,
-      opacity 0.8s,
-      background-color 0.3s;
+   transition-property: transform, opacity, background-color;
+   transition-duration: 0.8s, 0.8s, 0.3s;
+   transition-delay: 0.5s, 0.5s, 0s;
 }
 
 [data-watch].hero__text,
-[data-watch].features__item:nth-child(2) {
+[data-watch].features__item:nth-child(2),
+[data-watch].products__sub-title,
+[data-watch].top-block__title,
+[data-watch].works__item:nth-child(2),
+[data-watch].blog__sub-title {
    transition-delay: 0.3s;
 }
 
-[data-watch].hero__link,
-[data-watch].features__item:nth-child(3) {
+[data-watch].features__item:nth-child(3),
+[data-watch].about__image,
+[data-watch].products__items,
+[data-watch].works__item:nth-child(3),
+[data-watch].blog__body {
    transition-delay: 0.5s;
 }
 
-[data-watch].about__wrapper:nth-child(1) {
-   transform: translate(toRem(-40), 0px);
-}
-[data-watch].about__wrapper:nth-child(1).active {
-   transform: translate(0px, 0px);
+[data-watch].about__wrapper:nth-child(2) {
+   transition-delay: 0.7s;
 }
 
+[data-watch].about__image {
+   transform: translate(toRem(-40), 0px);
+}
+[data-watch].about__image.active {
+   transform: translate(0px, 0px);
+}
 [data-watch].about__wrapper:nth-child(2) {
    transform: translate(toRem(40), 0px);
 }
 [data-watch].about__wrapper:nth-child(2).active {
+   transform: translate(0px, 0px);
+}
+
+[data-watch].works__item {
+   transform: translate(toRem(40), 0px);
+}
+[data-watch].works__item.active {
    transform: translate(0px, 0px);
 }
